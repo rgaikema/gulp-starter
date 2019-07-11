@@ -1,0 +1,38 @@
+@import 'reset/reset';
+@import 'partials/fonts';
+
+html{
+	height: 100%;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+	background: linear-gradient(#e98a00, #f5aa2f);
+	height: 100%;
+	color: #333;
+}
+
+h1 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+	font-size: 36px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	color: white;
+}
+
+.section {
+	display: flex;
+	background: #fefefe;
+	padding: 20px;
+}
+
+.nav__list {
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-around;
+}
+ img {
+	 max-width: 100%;
+ }
