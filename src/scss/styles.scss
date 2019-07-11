@@ -8,9 +8,17 @@ html{
 body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 600;
-	background: linear-gradient(#e98a00, #f5aa2f);
+	background: linear-gradient(#ffc986, #b3a81f);
 	height: 100%;
-	color: #333;
+	color: #2c4c5f;
+}
+
+img {
+	max-width: 100%;
+}
+
+p{
+	margin-bottom: 20px;
 }
 
 h1 {
@@ -18,13 +26,23 @@ h1 {
 	font-weight: 600;
 	font-size: 36px;
 	margin-bottom: 20px;
-	margin-top: 20px;
-	color: white;
 }
 
 .section {
-	display: flex;
 	background: #fefefe;
+	padding: 20px;
+
+	&.main {
+		min-height: 70vh;
+	}
+
+	&.footer {
+		background: transparent;
+		color: #946509;
+	}
+}
+
+.nav {
 	padding: 20px;
 }
 
@@ -33,6 +51,12 @@ h1 {
 	display: flex;
 	justify-content: space-around;
 }
- img {
-	 max-width: 100%;
- }
+.nav__list__item a,
+.nav__list__item a:visited{
+	color: #515f67;
+	text-decoration: none;
+
+	&:hover {
+		color: #333;
+	}
+}
