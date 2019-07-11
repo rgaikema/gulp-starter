@@ -3,7 +3,7 @@
 ##### Updated 11-07-2019
 Made for development while working on static frontend before implementing a CMS.
 
-###Dependencies
+### Dependencies
 
 1. Gulp
 2. Sass
@@ -13,6 +13,12 @@ Made for development while working on static frontend before implementing a CMS.
 5. GreenSock
 
 And some other small ones
+
+---
+
+## Requisites
+
+Make sure you have [Node](https://nodejs.org/en/) installed and [gulp globally](https://gulpjs.com/).
 
 ---
 
@@ -40,3 +46,6 @@ Javascript from vendors can be placed in the 'src/js/vendor' folder. They wil be
 
 #### BrowserSync & Watch
 While using `gulp dev` BrowserSyn while load the site at http://localhost:3001/ and the HTML, JS and SCSS files are being watched. BrowserSync will reload the page when files are changed.
+
+#### GreenSock
+This dependency is optional. I installed it because I often use it for animations, but you can uninstall (`npm uninstall gsap --save-dev`) it and remove references in the JS files to work without GreenSock.
