@@ -7,7 +7,7 @@ Made for development while working on static frontend before implementing a CMS.
 
 1. Gulp
 2. Sass
-3. Babel + Browerify
+3. Babel + Browserify
 4. File includes
 5. Browsersync
 5. GreenSock
