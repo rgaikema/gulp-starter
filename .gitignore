@@ -3,5 +3,5 @@ node_modules
 .sass-cache
 .publish
 .idea
-./dist
+dist/
 package-lock.json
