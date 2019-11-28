@@ -25,7 +25,8 @@ const config = {
 			pages: './src/pages/*.html',
 			fonts: './src/fonts/*',
 			images: './src/images/*',
-			scss: './src/scss/*.scss',
+			scss: './src/scss/**/*.scss',
+			mainScss: './src/scss/styles.scss',
 			js: './src/js/**/*.js',
 			mainJs: './src/js/app.js',
 			vendor: './src/js/vendor/**/*.js'
@@ -76,14 +77,14 @@ function images() {
 }
 
 function compileSass() {
-	return src(config.dir.src.scss)
+	return src(config.dir.src.mainScss)
 		.pipe(sass.sync().on('error', sass.logError))
 		.pipe(dest(config.dir.dist.css))
 		.pipe(browserSync.stream());
 }
 
 function compileSassDev() {
-	return src(config.dir.src.scss)
+	return src(config.dir.src.mainScss)
 		.pipe(sourcemaps.init())
 		.pipe(sass.sync().on('error', sass.logError))
 		.pipe(sourcemaps.write(config.dir.dist.sourcemaps))
