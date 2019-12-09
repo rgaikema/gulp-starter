@@ -171,18 +171,18 @@ exports.build = series(
 	javascript,
 );
 
-exports.dev = series(
-	clean,
-	parallel(
-		renderHTMLPages,
-		fonts,
-		images,
-	),
-	compileSassDev,
-	vendors,
-	javascriptDev,
-	watchChanges
-);
+// exports.dev = series(
+// 	clean,
+// 	parallel(
+// 		renderHTMLPages,
+// 		fonts,
+// 		images,
+// 	),
+// 	compileSassDev,
+// 	vendors,
+// 	javascriptDev,
+// 	watchChanges
+// );
 
 exports.dev = series(
 	clean,
