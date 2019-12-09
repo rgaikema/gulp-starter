@@ -7,9 +7,19 @@ html{
 }
 
 $min_width: 320px;
-$max_width: 1200px;
+$max_width: 1600px;
 $min_font: 16px;
 $max_font: 24px;
+
+$gutter_small: .5em;
+$gutter_medium: 1em;
+$gutter_large: 2em;
+
+$light_grey: #eaeaea;
+$grey: #cccccc;
+$black: #000000;
+$white: #ffffff;
+
 
 html {
 	@include fluid-type($min_width, $max_width, $min_font, $max_font);
@@ -18,7 +28,7 @@ html {
 body {
 	font-family: 'Roboto Light', sans-serif;
 	background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-	height: 100%;
+	min-height: 100vh;
 	color: #444;
 	//font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
@@ -38,10 +48,10 @@ h1 {
 
 .section {
 	line-height: 1.4;
-	padding: 2em;
+	padding: $gutter_small 0;
 
 	&.main {
-		min-height: 70vh;
+		min-height: 50vh;
 	}
 
 	&.footer {
@@ -51,8 +61,18 @@ h1 {
 	}
 }
 
+.container {
+	padding: 0 $gutter_small;
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
+.header {
+	background: $white;
+}
+
 .nav {
-	padding: 1em 2em;
+	padding: 0;
 	display: flex;
 	align-content: center;
 }
@@ -69,14 +89,14 @@ h1 {
 }
 
 .nav__list {
-	margin: 1em;
+	margin: $gutter_medium;
 	display: flex;
 	justify-content: flex-end;
 	width: 50%;
 
 	a {
 		display: block;
-		padding: .5em 1em;
+		padding: $gutter_small $gutter_medium;
 		text-transform: lowercase;
 	}
 }
@@ -99,9 +119,60 @@ h1 {
 	}
 }
 
-.blob{
+/* autoprefixer grid: autoplace */
+.grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(3, auto);
+	grid-gap: 40px 20px;
+	margin-bottom: 20vh;
 
-	svg {
-		max-width: 100%;
+	.item {
+		background: $light_grey;
+		min-height: 75vw;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+@media screen and (min-width: 520px) {
+	.grid {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(3, auto);
+
+		.item {
+			min-height: 25vw;
+		}
+	}
+}
+
+@media screen and (min-width: 640px) {
+	.grid {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: repeat(3, auto);
+	}
+
+	.section {
+		padding: $gutter_medium 0;
+	}
+
+	.container {
+		padding: 0 $gutter_medium;
+	}
+}
+
+@media screen and (min-width: 860px) {
+	.grid {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: repeat(3, auto);
+	}
+
+	.section {
+		padding: $gutter_large 0;
+	}
+
+	.container {
+		padding: 0 $gutter_large;
 	}
 }

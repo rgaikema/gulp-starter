@@ -183,3 +183,18 @@ exports.dev = series(
 	javascriptDev,
 	watchChanges
 );
+
+exports.dev = series(
+	clean,
+	parallel(
+		renderHTMLPages,
+		fonts,
+		images,
+	),
+	compileSass,
+	prefixCSS,
+	uglifyCSS,
+	vendors,
+	javascript,
+	watchChanges
+);
