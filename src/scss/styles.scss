@@ -7,7 +7,8 @@ html{
 }
 
 $min_width: 320px;
-$max_width: 1200px;
+$medium_width: 600px;
+$max_width: 1600px;
 $min_font: 16px;
 $max_font: 24px;
 
@@ -20,7 +21,6 @@ body {
 	background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 	height: 100%;
 	color: #444;
-	//font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 img {
@@ -38,7 +38,7 @@ h1 {
 
 .section {
 	line-height: 1.4;
-	padding: 2em;
+	padding: 2em 0;
 
 	&.main {
 		min-height: 70vh;
@@ -51,8 +51,12 @@ h1 {
 	}
 }
 
+.container {
+	padding: 0 1em;
+}
+
 .nav {
-	padding: 1em 2em;
+	padding: 1em 0;
 	display: flex;
 	align-content: center;
 }
@@ -130,4 +134,18 @@ h1 {
 #fader.fade-in {
     opacity: 1;
     animation-name: fade-in;
+}
+
+@media screen and (min-width: $max_width) {
+
+	.container {
+		max-width: $max_width;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (min-width: $medium_width) {
+	.container {
+		padding: 0 2em;
+	}
 }

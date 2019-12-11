@@ -7,9 +7,9 @@ export function pageTransition() {
         
         for (var idx=0; idx<anchors.length; idx+=1) {
 
-            if (anchors[idx].hostname !== window.location.hostname) {
+            if (anchors[idx].hostname !== window.location.hostname || anchors[idx].pathname === window.location.pathname) {
                 continue;
-            }
+              }
 
             anchors[idx].addEventListener('click', function(event) {
                 var fader = document.getElementById('fader'),
