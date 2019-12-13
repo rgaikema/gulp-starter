@@ -6,16 +6,26 @@
                 content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <title>Starter - Homepage</title>
+            <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
             <link rel="stylesheet" href="css/styles.css">
         </head>
         <svg id="fader"></svg>
+        <noscript>
+            <style type="text/css">
+                .section.main{ opacity: 1!important; transform: translate(0,0)!important;}
+                #fader{opacity: 0!important}
+            </style>
+            <div class="noscriptmsg">
+                You don't have javascript enabled.
+            </div>
+        </noscript>
         <script>
-            fadeInPage();
-            function fadeInPage() {
-                if (!window.AnimationEvent) { return; }
-                var fader = document.getElementById('fader');
-                fader.classList.add('fade-out');
-            }
+	        function fadeInPage() {
+		        if (!window.AnimationEvent) { return; }
+		        let fader = document.getElementById('fader');
+		        fader.setAttribute('class', 'fade-out');
+	        }
+	        fadeInPage();
         </script>
         <header class="header">
             <div class="container">

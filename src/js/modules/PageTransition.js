@@ -8,8 +8,8 @@ export function pageTransition() {
         for (var idx=0; idx<anchors.length; idx+=1) {
 
             if (anchors[idx].hostname !== window.location.hostname || anchors[idx].pathname === window.location.pathname) {
-                continue;
-              }
+		        continue;
+	        }
 
             anchors[idx].addEventListener('click', function(event) {
                 var fader = document.getElementById('fader'),
@@ -22,8 +22,8 @@ export function pageTransition() {
                 fader.addEventListener('animationend', listener);
                 
                 event.preventDefault();
-
-                fader.classList.add('fade-in');
+                
+                fader.setAttribute('class', 'fade-in');
             });
         }
     });
@@ -33,7 +33,8 @@ export function pageTransition() {
         return;
         }
         var fader = document.getElementById('fader');
-        fader.classList.remove('fade-in');
+
+	    fader.removeAttribute('class', 'fade-in');
     });
 
 }

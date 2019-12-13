@@ -1,9 +1,37 @@
 @@include('./partials/header.html')
 
+
     <section class="section main">
         <div class="container">
             <h1>Contact Page </h1>
             <p>This is the Contact page</p>
+
+            <div class="icon_holder">
+                <svg class="icon_gradient normal">
+                    <defs>
+                        <linearGradient id="dark" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%"   stop-color="#000"/>
+                            <stop offset="100%" stop-color="#666"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M150 0 L75 200 L225 200 Z" />
+                </svg>
+                <svg class="icon_gradient hover">
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%"   stop-color="#05a"/>
+                            <stop offset="100%" stop-color="#0a5"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M150 0 L75 200 L225 200 Z" />
+                </svg>
+            </div>
+
+
+            <object class="svg_icon" type='image/svg+xml' data='/images/icons.svg?id=icon1#svgView(viewBox(0,0,64,64))'></object>
+            <object class="svg_icon" type='image/svg+xml' data='/images/icons.svg?id=icon2#svgView(viewBox(64,0,64,64))'></object>
+            <object class="svg_icon" type='image/svg+xml' data='/images/icons.svg?id=icon3#svgView(viewBox(128,0,64,64))'></object>
+
         </div>
     </section>
 
